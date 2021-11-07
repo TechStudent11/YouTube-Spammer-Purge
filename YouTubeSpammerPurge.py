@@ -63,6 +63,9 @@ scannedCommentsCount = 0
 logMode = False
 ########################
 
+youtube = None
+spammer_channel_id = None
+
 ##########################################################################################
 ################################## AUTHORIZATION #########################################
 ##########################################################################################
@@ -568,7 +571,7 @@ def open_log_file(name):
 ##########################################################################################
 ##########################################################################################
 
-if __name__ == "__main__":
+def main():
   # Authenticate with the Google API
   # If get error about instantiation or creds expired, just delete token.pickle and run again
   youtube = get_authenticated_service()
@@ -773,3 +776,5 @@ if __name__ == "__main__":
   else:
     print("\nFinished Executing.")
 
+if __name__ == "__main__":
+  main()
